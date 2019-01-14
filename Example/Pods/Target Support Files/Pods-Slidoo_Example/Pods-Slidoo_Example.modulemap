@@ -1,0 +1,6 @@
+framework module Pods_Slidoo_Example {
+  umbrella header "Pods-Slidoo_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - Slidoo (0.1.0)
+
+DEPENDENCIES:
+  - Slidoo (from `../`)
+
+EXTERNAL SOURCES:
+  Slidoo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Slidoo: 313d56f2f5d0fbf55dc3bcb92299099ed620c703
+
+PODFILE CHECKSUM: 297710453316435bcf93e0b4120517a14b5d09b2
+
+COCOAPODS: 1.5.3

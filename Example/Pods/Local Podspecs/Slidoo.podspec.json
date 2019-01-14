@@ -1,0 +1,22 @@
+{
+  "name": "Slidoo",
+  "version": "0.1.0",
+  "summary": "A short description of Slidoo.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/mitul_manish/Slidoo",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "mitul_manish": "mitul.manish@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/mitul_manish/Slidoo.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Slidoo/Classes/**/*"
+}

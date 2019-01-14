@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Slidoo_Example' do
+  pod 'Slidoo', :path => '../'
+
+  target 'Slidoo_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

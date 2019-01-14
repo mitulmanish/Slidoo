@@ -1,0 +1,6 @@
+framework module Slidoo {
+  umbrella header "Slidoo-umbrella.h"
+
+  export *
+  module * { export * }
+}
