@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0AD6A8A9D6B236D7D7076EB10DBE2F09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		0C527F7124D7162423DF22C63589C6B7 /* NavigationDrawerSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292920CEE6D18E1F49C2F466F5688AE /* NavigationDrawerSwipeController.swift */; };
 		2AD962E9508E03DF135C80BB47D16AA2 /* Pods-Slidoo_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 025308EBB97C37874F5233ABCB90BD55 /* Pods-Slidoo_Example-dummy.m */; };
 		312EA29335ADF6A235DF1AFA3EE3A18A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		417FDA9F24EB51B766F328C1E8929A26 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC848200CB3802408DD83B844EB1E55F /* UIView+Extensions.swift */; };
 		4AAC39716E10458B522DAD5A980475B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		509A6E332AB896C3F3462E90E12A421A /* Slidoo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9109E328D1277106F9C2FA8E497EA1A7 /* Slidoo-dummy.m */; };
-		58D660FCD901B46463686785DBF1D70A /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C20AECB80FC1434B12F4453830310D /* ReplaceMe.swift */; };
-		66CE65C0C9B1CA8F05D9CFF7051235D5 /* Slidoo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C7385CB47BF6D6153A509E6C37D7C47 /* Slidoo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66CE65C0C9B1CA8F05D9CFF7051235D5 /* Slidoo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FB493A1ECB9C1F01FF02705FA496238 /* Slidoo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67277CCDD51DFB6B6F613547891AAFAF /* Pods-Slidoo_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5640BF3E9D2264449909AEA18DF3157 /* Pods-Slidoo_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BB1E45E0764397D3939B067E9BBE36D /* Slidoo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C63AAF8A4EE554F99ACE425430F245B1 /* Slidoo-dummy.m */; };
+		BF723B6916AF6290D8FBEF0690ECB1BF /* DimmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6A3FDDF21A679BD74E5DEF75D79141 /* DimmingView.swift */; };
 		C16075E12A4D209E2A0797A38F02BF97 /* Pods-Slidoo_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CE7A78DEAE4650AB64434F22650F26 /* Pods-Slidoo_Tests-dummy.m */; };
+		E611CA19F91350CBEF3ECB0A6BA55213 /* NavigationDrawerPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3830920B31E56AF9B4B8C77615027DC0 /* NavigationDrawerPresentationAnimator.swift */; };
+		F7D2AE48689744853D1B69FB63FEDAD9 /* DragDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E654F3E6B79593CC05318B7C4F97FDAB /* DragDirection.swift */; };
 		FB5F7C690C86249FCA6FC7A1E3CA2443 /* Pods-Slidoo_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EDFB6637433005590FF376C17B5446B /* Pods-Slidoo_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -37,41 +41,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D145DAF93188E1C225DC076F8F95AC /* Slidoo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Slidoo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		025308EBB97C37874F5233ABCB90BD55 /* Pods-Slidoo_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Slidoo_Example-dummy.m"; sourceTree = "<group>"; };
 		05AC458E328B84DECAEDFA3233C96E5D /* Pods-Slidoo_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Slidoo_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		0AB6B7CC4D315D65AE9BA21BBEC82CA9 /* Slidoo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Slidoo.xcconfig; sourceTree = "<group>"; };
+		26FDD80805332B9976BF7ADD6E779B84 /* Slidoo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Slidoo-prefix.pch"; sourceTree = "<group>"; };
+		270B124E0BBCB79FC2C80415DD107DB0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2D377D3D57F90807464FFBBB3AA995A7 /* Pods-Slidoo_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Slidoo_Tests-resources.sh"; sourceTree = "<group>"; };
 		2D831DF4CA3EEC5D78E6CEAC29D57A27 /* Pods-Slidoo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Slidoo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		37C20AECB80FC1434B12F4453830310D /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = Slidoo/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		3830920B31E56AF9B4B8C77615027DC0 /* NavigationDrawerPresentationAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationDrawerPresentationAnimator.swift; path = Slidoo/Classes/NavigationDrawerPresentationAnimator.swift; sourceTree = "<group>"; };
 		468EB31F8E1768754CA793574DA5F006 /* Pods-Slidoo_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Slidoo_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4A78073B99CD8AD99729F4C0F8803D52 /* Slidoo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Slidoo.modulemap; sourceTree = "<group>"; };
-		4C7385CB47BF6D6153A509E6C37D7C47 /* Slidoo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Slidoo-umbrella.h"; sourceTree = "<group>"; };
+		48CE0D637E8F3AEF0C71BDEA467B8EF6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4CFA11A5550E3ED8CB1456A482963455 /* Pods-Slidoo_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Slidoo_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6063C7A129B373F6B0DE02026735AB4F /* Pods_Slidoo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Slidoo_Example.framework; path = "Pods-Slidoo_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6063C7A129B373F6B0DE02026735AB4F /* Pods_Slidoo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Slidoo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63159BDBC7884C4099974B783098826F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65EF89C75A476062D0DC3CCF068FDAAC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EDFB6637433005590FF376C17B5446B /* Pods-Slidoo_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Slidoo_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6F9FF8FC26BF9874DAB2A85F98B5A553 /* Pods-Slidoo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Slidoo_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7978B8DED71C0A63AB4E8398DBB2CEE1 /* Pods-Slidoo_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Slidoo_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		7BAB2B3ADFA71B32067ACD6E5476C4D4 /* Slidoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Slidoo.framework; path = Slidoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9109E328D1277106F9C2FA8E497EA1A7 /* Slidoo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Slidoo-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9638A4E8DC8828CA1B4B90C970F9EC77 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		9A42C5F4AF4A260F634DCD5F9E0E6B64 /* Pods_Slidoo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Slidoo_Tests.framework; path = "Pods-Slidoo_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DEE4F1CE09BC4049DB7BCE60C168455 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7BAB2B3ADFA71B32067ACD6E5476C4D4 /* Slidoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Slidoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A42C5F4AF4A260F634DCD5F9E0E6B64 /* Pods_Slidoo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Slidoo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B6A3FDDF21A679BD74E5DEF75D79141 /* DimmingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DimmingView.swift; path = Slidoo/Classes/DimmingView.swift; sourceTree = "<group>"; };
+		9FB493A1ECB9C1F01FF02705FA496238 /* Slidoo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Slidoo-umbrella.h"; sourceTree = "<group>"; };
 		A117D1FD81A131AFEAC6DA8EE65292D3 /* Pods-Slidoo_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Slidoo_Example-resources.sh"; sourceTree = "<group>"; };
 		A6CBEA50E6ECAC6CF522977B12F663AB /* Pods-Slidoo_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Slidoo_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		B3828B9D2383897A51E7C2C6D140CF58 /* Pods-Slidoo_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Slidoo_Example.modulemap"; sourceTree = "<group>"; };
 		BA73451DE94DBB3EA59E9D819CA35D91 /* Pods-Slidoo_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Slidoo_Example-frameworks.sh"; sourceTree = "<group>"; };
-		C08AB4E72D3478B679A317FBB5AA4076 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C192AEA36D69A8A956B13A3ABC6EFE6D /* Pods-Slidoo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Slidoo_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C246ADA2C4AFC8E1946AC093DD441A97 /* Pods-Slidoo_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Slidoo_Tests.modulemap"; sourceTree = "<group>"; };
-		CE337C1985F35BB3947BFACD8C9E2C41 /* Slidoo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Slidoo-prefix.pch"; sourceTree = "<group>"; };
+		C292920CEE6D18E1F49C2F466F5688AE /* NavigationDrawerSwipeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationDrawerSwipeController.swift; path = Slidoo/Classes/NavigationDrawerSwipeController.swift; sourceTree = "<group>"; };
+		C63AAF8A4EE554F99ACE425430F245B1 /* Slidoo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Slidoo-dummy.m"; sourceTree = "<group>"; };
+		CB884547819E2AA7E6B615421877BEB3 /* Slidoo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Slidoo.xcconfig; sourceTree = "<group>"; };
 		CF308B7E6ECD5536F5C03A20D7844247 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5CE7A78DEAE4650AB64434F22650F26 /* Pods-Slidoo_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Slidoo_Tests-dummy.m"; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DDD5B79F7FB547189136D7163A3A9420 /* Slidoo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Slidoo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DE524CE1787951163C9F7D842A8275CC /* Pods-Slidoo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Slidoo_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E654F3E6B79593CC05318B7C4F97FDAB /* DragDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DragDirection.swift; path = Slidoo/Classes/DragDirection.swift; sourceTree = "<group>"; };
+		EC848200CB3802408DD83B844EB1E55F /* UIView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Slidoo/Classes/UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F5640BF3E9D2264449909AEA18DF3157 /* Pods-Slidoo_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Slidoo_Example-umbrella.h"; sourceTree = "<group>"; };
+		FE61CE3BDD397FC7E4B0EB4C1E373AB3 /* Slidoo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Slidoo.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		020987F719B3DC798FF14C59C3F8CDE4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				65EF89C75A476062D0DC3CCF068FDAAC /* Info.plist */,
+				FE61CE3BDD397FC7E4B0EB4C1E373AB3 /* Slidoo.modulemap */,
+				CB884547819E2AA7E6B615421877BEB3 /* Slidoo.xcconfig */,
+				C63AAF8A4EE554F99ACE425430F245B1 /* Slidoo-dummy.m */,
+				26FDD80805332B9976BF7ADD6E779B84 /* Slidoo-prefix.pch */,
+				9FB493A1ECB9C1F01FF02705FA496238 /* Slidoo-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Slidoo";
+			sourceTree = "<group>";
+		};
 		27DB0A62BE0B8890DE8BD666271225A5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +131,21 @@
 				E13BEAF4AC4A3AFC59E3592868762519 /* Pods-Slidoo_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		29BB58FA676E5CEEC73F69624517507E /* Slidoo */ = {
+			isa = PBXGroup;
+			children = (
+				9B6A3FDDF21A679BD74E5DEF75D79141 /* DimmingView.swift */,
+				E654F3E6B79593CC05318B7C4F97FDAB /* DragDirection.swift */,
+				3830920B31E56AF9B4B8C77615027DC0 /* NavigationDrawerPresentationAnimator.swift */,
+				C292920CEE6D18E1F49C2F466F5688AE /* NavigationDrawerSwipeController.swift */,
+				EC848200CB3802408DD83B844EB1E55F /* UIView+Extensions.swift */,
+				5E359F12CC71B5F62B5B0825E07E9431 /* Pod */,
+				020987F719B3DC798FF14C59C3F8CDE4 /* Support Files */,
+			);
+			name = Slidoo;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		44D5347904CF754D6785B84253F2574A /* iOS */ = {
@@ -119,29 +156,21 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		4625E2E0F7ECC947916DF3E16F9CAD28 /* Pod */ = {
+		5E359F12CC71B5F62B5B0825E07E9431 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				9638A4E8DC8828CA1B4B90C970F9EC77 /* LICENSE */,
-				9DEE4F1CE09BC4049DB7BCE60C168455 /* README.md */,
-				00D145DAF93188E1C225DC076F8F95AC /* Slidoo.podspec */,
+				270B124E0BBCB79FC2C80415DD107DB0 /* LICENSE */,
+				48CE0D637E8F3AEF0C71BDEA467B8EF6 /* README.md */,
+				DDD5B79F7FB547189136D7163A3A9420 /* Slidoo.podspec */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		62A2E186D771224E4AFB12EB0AFC36DC /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C098B1209BBD72CCECD9C49B5A97CD1C /* Slidoo */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				62A2E186D771224E4AFB12EB0AFC36DC /* Development Pods */,
+				B0A40338243876515AC770966F1F7139 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				FBE059793B96B4F6F86501BF43D8C7E0 /* Products */,
 				27DB0A62BE0B8890DE8BD666271225A5 /* Targets Support Files */,
@@ -166,37 +195,20 @@
 			path = "Target Support Files/Pods-Slidoo_Example";
 			sourceTree = "<group>";
 		};
+		B0A40338243876515AC770966F1F7139 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29BB58FA676E5CEEC73F69624517507E /* Slidoo */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				44D5347904CF754D6785B84253F2574A /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BC4A081DDA759EFE69DD9DE9C9C670FC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C08AB4E72D3478B679A317FBB5AA4076 /* Info.plist */,
-				4A78073B99CD8AD99729F4C0F8803D52 /* Slidoo.modulemap */,
-				0AB6B7CC4D315D65AE9BA21BBEC82CA9 /* Slidoo.xcconfig */,
-				9109E328D1277106F9C2FA8E497EA1A7 /* Slidoo-dummy.m */,
-				CE337C1985F35BB3947BFACD8C9E2C41 /* Slidoo-prefix.pch */,
-				4C7385CB47BF6D6153A509E6C37D7C47 /* Slidoo-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Slidoo";
-			sourceTree = "<group>";
-		};
-		C098B1209BBD72CCECD9C49B5A97CD1C /* Slidoo */ = {
-			isa = PBXGroup;
-			children = (
-				37C20AECB80FC1434B12F4453830310D /* ReplaceMe.swift */,
-				4625E2E0F7ECC947916DF3E16F9CAD28 /* Pod */,
-				BC4A081DDA759EFE69DD9DE9C9C670FC /* Support Files */,
-			);
-			name = Slidoo;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		E13BEAF4AC4A3AFC59E3592868762519 /* Pods-Slidoo_Tests */ = {
@@ -281,7 +293,7 @@
 			buildConfigurationList = 033ED942A64F1AB0CAEC68575BA8245D /* Build configuration list for PBXNativeTarget "Slidoo" */;
 			buildPhases = (
 				94FEAAF0BEB69003C833B1108EF632B9 /* Headers */,
-				096E1A106C867DFFDB6F5A1B81077B31 /* Sources */,
+				EC76C89560CF84C4C81482926F64DA5A /* Sources */,
 				177CAC82AA11F8A3CB7CB65E9657A3D2 /* Frameworks */,
 				ADD2BE4D5BBC36FE8375515293E8F6FD /* Resources */,
 			);
@@ -366,15 +378,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		096E1A106C867DFFDB6F5A1B81077B31 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				58D660FCD901B46463686785DBF1D70A /* ReplaceMe.swift in Sources */,
-				509A6E332AB896C3F3462E90E12A421A /* Slidoo-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		69477B5D12A1C21D6C759AE3E163AD4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +391,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C16075E12A4D209E2A0797A38F02BF97 /* Pods-Slidoo_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC76C89560CF84C4C81482926F64DA5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF723B6916AF6290D8FBEF0690ECB1BF /* DimmingView.swift in Sources */,
+				F7D2AE48689744853D1B69FB63FEDAD9 /* DragDirection.swift in Sources */,
+				E611CA19F91350CBEF3ECB0A6BA55213 /* NavigationDrawerPresentationAnimator.swift in Sources */,
+				0C527F7124D7162423DF22C63589C6B7 /* NavigationDrawerSwipeController.swift in Sources */,
+				8BB1E45E0764397D3939B067E9BBE36D /* Slidoo-dummy.m in Sources */,
+				417FDA9F24EB51B766F328C1E8929A26 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +425,37 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1C60916110EA35E8C017EC6E19DD025E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB884547819E2AA7E6B615421877BEB3 /* Slidoo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Slidoo/Slidoo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Slidoo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Slidoo/Slidoo.modulemap";
+				PRODUCT_MODULE_NAME = Slidoo;
+				PRODUCT_NAME = Slidoo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		50646285DD9FD95AF390BDA3FB1948EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -530,8 +577,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -564,37 +610,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		71C780E0032339D2A495BE7BB9C6DF08 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AB6B7CC4D315D65AE9BA21BBEC82CA9 /* Slidoo.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Slidoo/Slidoo-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Slidoo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Slidoo/Slidoo.modulemap";
-				PRODUCT_MODULE_NAME = Slidoo;
-				PRODUCT_NAME = Slidoo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -668,6 +683,38 @@
 			};
 			name = Release;
 		};
+		C412E945AB9A81FA757FBC949E34BFA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB884547819E2AA7E6B615421877BEB3 /* Slidoo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Slidoo/Slidoo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Slidoo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Slidoo/Slidoo.modulemap";
+				PRODUCT_MODULE_NAME = Slidoo;
+				PRODUCT_NAME = Slidoo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C68127E346889870B57FD7F20EE31362 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE524CE1787951163C9F7D842A8275CC /* Pods-Slidoo_Tests.release.xcconfig */;
@@ -702,46 +749,14 @@
 			};
 			name = Release;
 		};
-		FC0C77508C8CDE23EF90DFCD25A82AD3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AB6B7CC4D315D65AE9BA21BBEC82CA9 /* Slidoo.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Slidoo/Slidoo-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Slidoo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Slidoo/Slidoo.modulemap";
-				PRODUCT_MODULE_NAME = Slidoo;
-				PRODUCT_NAME = Slidoo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		033ED942A64F1AB0CAEC68575BA8245D /* Build configuration list for PBXNativeTarget "Slidoo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71C780E0032339D2A495BE7BB9C6DF08 /* Debug */,
-				FC0C77508C8CDE23EF90DFCD25A82AD3 /* Release */,
+				1C60916110EA35E8C017EC6E19DD025E /* Debug */,
+				C412E945AB9A81FA757FBC949E34BFA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

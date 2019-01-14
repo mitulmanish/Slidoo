@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Slidoo'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Navigation Drawer implemented with Swift'
 
 # This description is used to generate tags and improve search results.
@@ -24,9 +24,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mitul_manish' => 'mitul.manish@gmail.com' }
   s.source           = { :git => 'https://github.com/mitulmanish/Slidoo.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/mitul_manish23'
-
   s.ios.deployment_target = '9.0'
-
   s.source_files = 'Slidoo/Classes/**/*'
+  s.swift_version = '4.2'
 end
