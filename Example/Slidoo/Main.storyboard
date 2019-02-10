@@ -13,7 +13,7 @@
         <!--Base View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BaseViewController" customModule="NavDrawer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BaseViewController" customModule="Slidoo_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
         <!--Drawer View Controller-->
         <scene sceneID="75I-Bw-bQU">
             <objects>
-                <viewController storyboardIdentifier="DrawerViewController" id="Iax-M3-TPP" customClass="DrawerViewController" customModule="NavDrawer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrawerViewController" id="Iax-M3-TPP" customClass="DrawerViewController" customModule="Slidoo_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nse-1f-cDc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,21 +70,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9UD-bi-7Ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1460" y="-18"/>
-        </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="0pU-yn-a2t">
-            <objects>
-                <viewController id="SZS-Aq-VTy" customClass="MenuViewController" customModule="NavDrawer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HLJ-b7-lgf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="OMl-QU-OaW"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LST-LI-Ycg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="54" y="725"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZvT-2v-aaB">
