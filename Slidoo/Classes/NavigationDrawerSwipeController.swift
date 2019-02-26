@@ -27,23 +27,29 @@ public class NavigationDrawerSwipeController: UIPresentationController, UIGestur
     }
 
     private var originX: CGFloat?
+    private var tapGestureRecognizer: UITapGestureRecognizer?
 
     override public func presentationTransitionDidEnd(_ completed: Bool) {
         let presentedViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan))
         let containerViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan))
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
-        tapGestureRecognizer.delegate = self
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
         presentedView?.addGestureRecognizer(presentedViewPanGesture)
         containerView?.addGestureRecognizer(containerViewPanGesture)
-        containerView?.addGestureRecognizer(tapGestureRecognizer)
+
+        if let tapGestureRecognizer = self.tapGestureRecognizer {
+            containerView?.addGestureRecognizer(tapGestureRecognizer)
+        }
     }
 
-    @objc func didTap(panRecognizer: UIPanGestureRecognizer) {
+    @objc func didTap(tapGestureRecognizer: UITapGestureRecognizer) {
+        let touchPointInPresentedView = tapGestureRecognizer.location(in: presentedView)
+        guard presentedView?.bounds.contains(touchPointInPresentedView) == false else { return }
         dismiss()
     }
 
     @objc public func didPan(panRecognizer: UIPanGestureRecognizer, screenGestureEnabled: Bool = false) {
         guard let presentedView = self.presentedView else { return }
+
         let translationPoint = panRecognizer.translation(in: presentedView)
 
         guard shouldPan(screenGestureEnabled: screenGestureEnabled, translationPoint: translationPoint.x) else {
@@ -143,10 +149,5 @@ public class NavigationDrawerSwipeController: UIPresentationController, UIGestur
 
     private func dismiss() {
         presentedViewController.dismiss(animated: true, completion: nil)
-    }
-
-    private func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        let touchPoint = touch.location(in: presentedView)
-        return presentedView?.bounds.contains(touchPoint) == false
     }
 }
