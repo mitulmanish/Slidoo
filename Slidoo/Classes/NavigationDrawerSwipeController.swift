@@ -5,7 +5,9 @@
 //  Created by Mitul Manish on 14/1/19.
 //
 
-public class NavigationDrawerSwipeController: UIPresentationController, UIGestureRecognizerDelegate {
+public class NavigationDrawerSwipeController: UIPresentationController {
+
+    private var originX: CGFloat?
 
     private var isRTL: Bool {
         return presentedView?.isRTL ?? false
@@ -15,6 +17,20 @@ public class NavigationDrawerSwipeController: UIPresentationController, UIGestur
         return presentedView?.bounds.width ?? 0
     }
 
+    override public func presentationTransitionDidEnd(_ completed: Bool) {
+        super.presentationTransitionDidEnd(completed)
+        let presentedViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan))
+        let containerViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
+        presentedView?.addGestureRecognizer(presentedViewPanGesture)
+        containerView?.addGestureRecognizer(containerViewPanGesture)
+        containerView?.addGestureRecognizer(tapGestureRecognizer)
+    }
+}
+
+// MARK: - Helpers
+
+extension NavigationDrawerSwipeController {
     private func shouldDismiss(dragDirection: DragDirection) -> Bool {
         switch (dragDirection, self.isRTL) {
         case (.left, false):
@@ -26,22 +42,35 @@ public class NavigationDrawerSwipeController: UIPresentationController, UIGestur
         }
     }
 
-    private var originX: CGFloat?
-    private var tapGestureRecognizer: UITapGestureRecognizer?
-
-    override public func presentationTransitionDidEnd(_ completed: Bool) {
-        let presentedViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan))
-        let containerViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan))
-        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
-        presentedView?.addGestureRecognizer(presentedViewPanGesture)
-        containerView?.addGestureRecognizer(containerViewPanGesture)
-
-        if let tapGestureRecognizer = self.tapGestureRecognizer {
-            containerView?.addGestureRecognizer(tapGestureRecognizer)
+    private func shouldPan(screenGestureEnabled: Bool, translationPoint: CGFloat) -> Bool {
+        switch (isRTL, screenGestureEnabled) {
+        case (false, true) where translationPoint >= presentedViewWidth:
+            return false
+        case (false, false) where translationPoint >= 0:
+            return false
+        case (true, true) where translationPoint <= -presentedViewWidth:
+            return false
+        case (true, false) where translationPoint <= 0:
+            return false
+        default:
+            return true
         }
     }
 
-    @objc func didTap(tapGestureRecognizer: UITapGestureRecognizer) {
+    private func configureDimmingViewAlpha(for translationPoint: CGFloat) {
+        let ratio = (abs(presentedViewWidth) - abs(translationPoint)) / abs(presentedViewWidth)
+        dimmingView?.alpha = min(max((ratio / 2), 0), 1)
+    }
+
+    private func dismiss() {
+        presentedViewController.dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: Panning
+
+extension NavigationDrawerSwipeController {
+    @objc private func didTap(tapGestureRecognizer: UITapGestureRecognizer) {
         let touchPointInPresentedView = tapGestureRecognizer.location(in: presentedView)
         guard presentedView?.bounds.contains(touchPointInPresentedView) == false else { return }
         dismiss()
@@ -83,42 +112,11 @@ public class NavigationDrawerSwipeController: UIPresentationController, UIGestur
             break
         }
     }
+}
 
-    private func animateForScreenGesture(_ translationPoint: CGPoint) {
-        let absoluteTranslationPointInXAxis = abs(translationPoint.x)
-        let halfPresentedViewWidth = abs(presentedViewWidth / 2.0)
-        if isRTL == false {
-            absoluteTranslationPointInXAxis >= halfPresentedViewWidth
-                ? animate(to: .right)
-                : dismiss()
-        } else {
-            let originX: CGFloat = (containerView?.bounds.width ?? 0) - presentedViewWidth
-            absoluteTranslationPointInXAxis >= halfPresentedViewWidth
-                ? animate(to: originX)
-                : dismiss()
-        }
-    }
+// MARK: - Animation
 
-    func shouldPan(screenGestureEnabled: Bool, translationPoint: CGFloat) -> Bool {
-        switch (isRTL, screenGestureEnabled) {
-        case (false, true) where translationPoint >= presentedViewWidth:
-            return false
-        case (false, false) where translationPoint >= 0:
-            return false
-        case (true, true) where translationPoint <= -presentedViewWidth:
-            return false
-        case (true, false) where translationPoint <= 0:
-            return false
-        default:
-            return true
-        }
-    }
-
-    private func configureDimmingViewAlpha(for translationPoint: CGFloat) {
-        let ratio = (abs(presentedViewWidth) - abs(translationPoint)) / abs(presentedViewWidth)
-        dimmingView?.alpha = min(max((ratio / 2), 0), 1)
-    }
-
+extension NavigationDrawerSwipeController {
     private func animate(to dragDirection: DragDirection) {
         var offset: CGFloat = 0
 
@@ -147,7 +145,18 @@ public class NavigationDrawerSwipeController: UIPresentationController, UIGestur
         })
     }
 
-    private func dismiss() {
-        presentedViewController.dismiss(animated: true, completion: nil)
+    private func animateForScreenGesture(_ translationPoint: CGPoint) {
+        let absoluteTranslationPointInXAxis = abs(translationPoint.x)
+        let halfPresentedViewWidth = abs(presentedViewWidth / 2.0)
+        if isRTL == false {
+            absoluteTranslationPointInXAxis >= halfPresentedViewWidth
+                ? animate(to: .right)
+                : dismiss()
+        } else {
+            let originX: CGFloat = (containerView?.bounds.width ?? 0) - presentedViewWidth
+            absoluteTranslationPointInXAxis >= halfPresentedViewWidth
+                ? animate(to: originX)
+                : dismiss()
+        }
     }
 }

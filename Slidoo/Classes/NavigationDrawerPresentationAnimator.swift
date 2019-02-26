@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 private enum OperationType {
-    case leftToRight(offset: CGFloat), rightToLeft(offset: CGFloat)
+    case leftToRight(offset: CGFloat)
+    case rightToLeft(offset: CGFloat)
 }
 
 public class NavigationDrawerPresentationAnimator: NSObject {
@@ -29,14 +30,6 @@ public class NavigationDrawerPresentationAnimator: NSObject {
 
 // MARK: - UIViewControllerAnimatedTransitioning
 extension NavigationDrawerPresentationAnimator: UIViewControllerAnimatedTransitioning {
-
-    private func setupviews(_ containerView: UIView, _ concernedView: UIView) {
-        if isBeingPresented {
-            let dimmingView = DimmingView(backgroundColor: .black, alpha: 0.2)
-            setupDimmingView(dimmingView, containerView)
-            setupPresentedView(presentedView: concernedView, containerView: containerView)
-        }
-    }
 
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let concernedVC = transitionContext.viewController(forKey: isBeingPresented
@@ -89,6 +82,20 @@ extension NavigationDrawerPresentationAnimator: UIViewControllerAnimatedTransiti
         }
     }
 
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.3
+    }
+}
+
+extension NavigationDrawerPresentationAnimator {
+    private func setupviews(_ containerView: UIView, _ concernedView: UIView) {
+        if isBeingPresented {
+            let dimmingView = DimmingView(backgroundColor: .black, alpha: 0.2)
+            setupDimmingView(dimmingView: dimmingView, containerView: containerView)
+            setupPresentedView(presentedView: concernedView, containerView: containerView)
+        }
+    }
+
     private func getOperationType(isBeingPresented: Bool, concernedView: UIView) -> OperationType {
         let width = concernedView.bounds.width
         let isRTL = concernedView.isRTL
@@ -105,11 +112,7 @@ extension NavigationDrawerPresentationAnimator: UIViewControllerAnimatedTransiti
             : .leftToRight(offset: 0)
     }
 
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.3
-    }
-
-    private func setupDimmingView(_ dimmingView: DimmingView, _ containerView: UIView) {
+    private func setupDimmingView(dimmingView: DimmingView, containerView: UIView) {
         dimmingView.translatesAutoresizingMaskIntoConstraints = false
         containerView.insertSubview(dimmingView, at: 0)
 
@@ -127,7 +130,9 @@ extension NavigationDrawerPresentationAnimator: UIViewControllerAnimatedTransiti
         var leadingConstraint: NSLayoutConstraint?
         let traitCollection = presentedView.traitCollection
         switch (traitCollection.horizontalSizeClass, traitCollection.verticalSizeClass) {
-        case (.regular, .compact), (.compact, .compact), (.compact, .regular):
+        case (.regular, .compact),
+             (.compact, .compact),
+             (.compact, .regular):
             let presentedViewWidth: CGFloat = NavigationDrawerPresentationAnimator.phoneViewWidth
             widthConstraint = presentedView.widthAnchor.constraint(equalToConstant: presentedViewWidth)
             leadingConstraint = presentedView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: -presentedViewWidth)
