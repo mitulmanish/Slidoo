@@ -5,7 +5,7 @@
 //  Created by Mitul Manish on 14/1/19.
 //
 
-public class NavigationDrawerSwipeController: UIPresentationController {
+public class NavigationDrawerSwipeController: UIPresentationController, UIGestureRecognizerDelegate {
 
     private var isRTL: Bool {
         return presentedView?.isRTL ?? false
@@ -144,10 +144,8 @@ public class NavigationDrawerSwipeController: UIPresentationController {
     private func dismiss() {
         presentedViewController.dismiss(animated: true, completion: nil)
     }
-}
 
-extension NavigationDrawerSwipeController: UIGestureRecognizerDelegate {
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+    private func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         let touchPoint = touch.location(in: presentedView)
         return presentedView?.bounds.contains(touchPoint) == false
     }
