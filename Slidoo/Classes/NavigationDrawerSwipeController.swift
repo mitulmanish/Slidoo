@@ -127,7 +127,7 @@ extension NavigationDrawerSwipeController {
             offset = isRTL ? ((originX ?? 0) + presentedViewWidth) : 0
         }
         
-        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+        UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseInOut], animations: { [weak self] in
             guard let self = self else { return }
             self.presentedView?.frame.origin.x = offset
             self.dimmingView?.alpha = self.shouldDismiss(dragDirection: dragDirection) ? 0 : 0.5
@@ -137,7 +137,7 @@ extension NavigationDrawerSwipeController {
     }
 
     private func animate(to offset: CGFloat) {
-        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+        UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseInOut], animations: { [weak self] in
             guard let self = self else { return }
             self.presentedView?.frame.origin.x = offset
             self.dimmingView?.alpha = 0.5

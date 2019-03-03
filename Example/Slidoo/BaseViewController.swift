@@ -41,10 +41,8 @@ class BaseViewController: UIViewController {
         switch panRecognizer.state {
         case .began:
             presentMenu(supportAnimation: false)
-        case .changed, .ended:
-            forwardPanGesture(panRecognizer)
         default:
-            break
+            forwardPanGesture(panRecognizer)
         }
     }
     
@@ -63,15 +61,11 @@ extension BaseViewController {
     }
     
     private func presentMenu(supportAnimation: Bool) {
-        guard let presentedVC = getDrawerViewController() else { return }
+        let presentedVC = DrawerViewController()
         presentedViewControllerTransitionAnimator = nil
         presentedViewControllerTransitionAnimator = NavigationDrawerTransitionDelegate(supportAnimation: supportAnimation)
         presentedVC.transitioningDelegate = presentedViewControllerTransitionAnimator
         presentedVC.modalPresentationStyle = .custom
         present(presentedVC, animated: true)
-    }
-    
-    private func getDrawerViewController() -> UIViewController? {
-        return DrawerViewController()
     }
 }
