@@ -12,6 +12,16 @@ class BaseViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    fileprivate func animateIndicators() {
+        UIView.animate(withDuration: 0.4,
+                       delay: 0,
+                       options: [.repeat, .autoreverse, .curveEaseInOut],
+                       animations: {
+                        self.handButton.center.y += 15.0
+                        self.swipeIndicatorButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
+        })
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -19,21 +29,12 @@ class BaseViewController: UIViewController {
         screenEdgeGesture.edges = view.isRTL ? .right : .left
         view.addGestureRecognizer(screenEdgeGesture)
         
-        UIView.animate(withDuration: 0.4,
-                       delay: 0,
-                       options: [.repeat, .autoreverse, .curveEaseInOut],
-                       animations: {
-                        self.handButton.center.y += 15.0
-        })
-        
-        UIView.animate(withDuration: 0.4,
-                       delay: 0,
-                       options: [.repeat, .autoreverse, .curveEaseInOut],
-                       animations: {
-                        self.swipeIndicatorButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
-        })
+        animateIndicators()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        animateIndicators()
+    }
     // MARK: - Actions
     
     @objc func didPan(panRecognizer: UIPanGestureRecognizer) {

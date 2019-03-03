@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012F06FD222BCE8D004C8675 /* DrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012F06FC222BCE8D004C8675 /* DrawerTableViewCell.swift */; };
+		012F06FF222BCEBC004C8675 /* DrawerTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012F06FE222BCEBC004C8675 /* DrawerTableViewHeader.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012F06FC222BCE8D004C8675 /* DrawerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTableViewCell.swift; sourceTree = "<group>"; };
+		012F06FE222BCEBC004C8675 /* DrawerTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTableViewHeader.swift; sourceTree = "<group>"; };
 		06E860C4316B3F5C5508C295 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		080E64068AB295FC0551CE50 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0F1E9B0D069C85A72422DD80 /* Slidoo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Slidoo.podspec; path = ../Slidoo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -116,6 +120,8 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				DD5AA27021ECAEE000132331 /* Slidoo_Example-Bridging-Header.h */,
+				012F06FC222BCE8D004C8675 /* DrawerTableViewCell.swift */,
+				012F06FE222BCEBC004C8675 /* DrawerTableViewHeader.swift */,
 			);
 			name = "Example for Slidoo";
 			path = Slidoo;
@@ -344,6 +350,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012F06FD222BCE8D004C8675 /* DrawerTableViewCell.swift in Sources */,
+				012F06FF222BCEBC004C8675 /* DrawerTableViewHeader.swift in Sources */,
 				DD5AA27521ECAEE200132331 /* AppDelegate.swift in Sources */,
 				DD5AA27621ECAEE200132331 /* BaseViewController.swift in Sources */,
 				DD5AA27C21ECAFD800132331 /* NavigationDrawerTransitionDelegate.swift in Sources */,

@@ -1,20 +1,20 @@
 import UIKit
 
 class DrawerViewController: UIViewController {
-    let tableViewData = [
+    private let tableViewData = [
         "🙎🏽‍♂️ Profile",
         "📃 Receipts",
         "🌟 Rewards",
         "🗓 Bookings"
     ]
     
-    lazy var headerView: DrawerTableViewHeader = {
+    private lazy var headerView: DrawerTableViewHeader = {
         let header = DrawerTableViewHeader(profileImage: UIImage(named: "pic"))
         header.translatesAutoresizingMaskIntoConstraints = false
         return header
     }()
     
-    lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -71,53 +71,5 @@ extension DrawerViewController: UITableViewDataSource {
 extension DrawerViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.textLabel?.text = tableViewData[indexPath.item]
-    }
-}
-
-class DrawerTableViewHeader: UIView {
-    lazy var profileImageView: UIImageView = {
-        let imageView = UIImageView(frame: .zero)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
-    
-    init(profileImage: UIImage?) {
-        super.init(frame: .zero)
-        backgroundColor = .white
-        setupProfileImage(with: profileImage)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setupProfileImage(with image: UIImage?) {
-        addSubview(profileImageView)
-        [profileImageView.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -(bounds.width / 4)),
-         profileImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-         profileImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.65),
-         profileImageView.widthAnchor.constraint(equalTo: profileImageView
-            .heightAnchor)].forEach { $0.isActive = true }
-        profileImageView.image = image
-        profileImageView.contentMode = .scaleAspectFit
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
-        profileImageView.clipsToBounds = true
-    }
-}
-
-class DrawerTableViewCell: UITableViewCell {
-    static let identifier = "cellID"
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        textLabel?.textColor = .darkGray
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
