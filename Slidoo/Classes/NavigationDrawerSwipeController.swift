@@ -126,23 +126,24 @@ extension NavigationDrawerSwipeController {
         case .right:
             offset = isRTL ? ((originX ?? 0) + presentedViewWidth) : 0
         }
-        originX = nil
-
+        
         UIView.animate(withDuration: 0.2, animations: { [weak self] in
             guard let self = self else { return }
             self.presentedView?.frame.origin.x = offset
             self.dimmingView?.alpha = self.shouldDismiss(dragDirection: dragDirection) ? 0 : 0.5
-        })
+        }) { [weak self] _ in
+            self?.originX = nil
+        }
     }
 
     private func animate(to offset: CGFloat) {
-        originX = nil
-
-        UIView.animate(withDuration: 0.3, animations: { [weak self] in
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
             guard let self = self else { return }
             self.presentedView?.frame.origin.x = offset
             self.dimmingView?.alpha = 0.5
-        })
+        }) { [weak self] _ in
+            self?.originX = nil
+        }
     }
 
     private func animateForScreenGesture(_ translationPoint: CGPoint) {

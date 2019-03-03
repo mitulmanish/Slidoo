@@ -18,58 +18,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presenting View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppK-Si-W5m">
-                                <rect key="frame" x="80" y="323" width="215" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgg-Bc-cAh">
+                                <rect key="frame" x="16" y="76" width="54" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="👆🏻"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR3-yx-hOq">
+                                <rect key="frame" x="16" y="223.5" width="54" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="👈🏻"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe the screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2a-1j-gVq">
+                                <rect key="frame" x="94" y="247" width="155.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoD-bt-Vbh">
+                                <rect key="frame" x="162.5" y="616" width="50" height="35"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Slidoo">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyK-a4-P7C">
+                                <rect key="frame" x="78" y="99.5" width="110" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ppK-Si-W5m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KfQ-y1-o1S"/>
-                            <constraint firstItem="ppK-Si-W5m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rh8-Ae-62X"/>
+                            <constraint firstItem="dR3-yx-hOq" firstAttribute="top" secondItem="Hgg-Bc-cAh" secondAttribute="bottom" constant="75.5" id="L0H-uv-R9w"/>
+                            <constraint firstItem="CoD-bt-Vbh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oeq-Tk-LxC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CoD-bt-Vbh" secondAttribute="bottom" constant="16" id="Puh-uQ-waW"/>
+                            <constraint firstItem="dR3-yx-hOq" firstAttribute="centerX" secondItem="Hgg-Bc-cAh" secondAttribute="centerX" id="Xkj-rW-5pT"/>
+                            <constraint firstItem="Hgg-Bc-cAh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="Y9s-N9-bUw"/>
+                            <constraint firstItem="l2a-1j-gVq" firstAttribute="centerY" secondItem="dR3-yx-hOq" secondAttribute="centerY" id="ec4-eg-2m0"/>
+                            <constraint firstItem="Hgg-Bc-cAh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mtx-v3-eHH"/>
+                            <constraint firstItem="hyK-a4-P7C" firstAttribute="centerY" secondItem="Hgg-Bc-cAh" secondAttribute="centerY" id="rTm-9J-K6C"/>
+                            <constraint firstItem="hyK-a4-P7C" firstAttribute="leading" secondItem="Hgg-Bc-cAh" secondAttribute="trailing" constant="8" id="va7-tu-AAg"/>
+                            <constraint firstItem="l2a-1j-gVq" firstAttribute="leading" secondItem="dR3-yx-hOq" secondAttribute="trailing" constant="24" id="vml-iR-DV2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="HWt-LY-tqu">
-                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="uR0-te-xyr">
+                        <barButtonItem key="leftBarButtonItem" image="icons8-menu-36" id="uR0-te-xyr">
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="buttonTouched:" destination="BYZ-38-t0r" id="Cv1-Wb-7LQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="handButton" destination="Hgg-Bc-cAh" id="HZq-4a-rOr"/>
+                        <outlet property="swipeIndicatorButton" destination="dR3-yx-hOq" id="IzG-dh-73b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1457" y="-672"/>
-        </scene>
-        <!--Drawer View Controller-->
-        <scene sceneID="75I-Bw-bQU">
-            <objects>
-                <viewController storyboardIdentifier="DrawerViewController" id="Iax-M3-TPP" customClass="DrawerViewController" customModule="Slidoo_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nse-1f-cDc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presented View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USX-Uu-aiW">
-                                <rect key="frame" x="82.5" y="122.5" width="210.5" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="USX-Uu-aiW" firstAttribute="centerY" secondItem="nse-1f-cDc" secondAttribute="centerY" multiplier="0.4" id="1AL-mI-bZS"/>
-                            <constraint firstItem="USX-Uu-aiW" firstAttribute="centerX" secondItem="nse-1f-cDc" secondAttribute="centerX" id="jq2-P4-SFg"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="03b-OJ-nQR"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9UD-bi-7Ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1460" y="-18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZvT-2v-aaB">
@@ -90,4 +99,7 @@
             <point key="canvasLocation" x="757.60000000000002" y="-671.51424287856082"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-menu-36" width="36" height="36"/>
+    </resources>
 </document>

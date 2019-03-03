@@ -3,13 +3,35 @@ import Slidoo
 
 class BaseViewController: UIViewController {
     private var presentedViewControllerTransitionAnimator: NavigationDrawerTransitionDelegate?
-
+    
+    @IBOutlet weak var handButton: UIButton!
+    
+    @IBOutlet weak var swipeIndicatorButton: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         let screenEdgeGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(didPan(panRecognizer:)))
         screenEdgeGesture.edges = view.isRTL ? .right : .left
         view.addGestureRecognizer(screenEdgeGesture)
+        
+        UIView.animate(withDuration: 0.4,
+                       delay: 0,
+                       options: [.repeat, .autoreverse, .curveEaseInOut],
+                       animations: {
+                        self.handButton.center.y += 15.0
+        })
+        
+        UIView.animate(withDuration: 0.4,
+                       delay: 0,
+                       options: [.repeat, .autoreverse, .curveEaseInOut],
+                       animations: {
+                        self.swipeIndicatorButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
+        })
     }
     
     // MARK: - Actions
@@ -49,9 +71,6 @@ extension BaseViewController {
     }
     
     private func getDrawerViewController() -> UIViewController? {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        guard let menuVC = storyboard.instantiateViewController(withIdentifier: "DrawerViewController")
-            as? DrawerViewController else { return nil }
-        return menuVC
+        return DrawerViewController()
     }
 }
