@@ -16,7 +16,7 @@ class DrawerTableViewHeader: UIView {
     
     init(profileImage: UIImage?) {
         super.init(frame: .zero)
-        backgroundColor = .white
+        backgroundColor = .darkGray
         setupProfileImage(with: profileImage)
     }
     

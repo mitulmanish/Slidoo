@@ -23,7 +23,7 @@ class DrawerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .darkGray
         setupHeaderView()
         setupTableView()
     }
@@ -53,6 +53,7 @@ class DrawerViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(DrawerTableViewCell.self, forCellReuseIdentifier: DrawerTableViewCell.identifier)
+        tableView.backgroundColor = .darkGray
     }
 }
 

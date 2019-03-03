@@ -12,7 +12,9 @@ class DrawerTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        textLabel?.textColor = .darkGray
+        backgroundColor = .darkGray
+        contentView.backgroundColor = .darkGray
+        textLabel?.textColor = .white
     }
     
     required init?(coder aDecoder: NSCoder) {
