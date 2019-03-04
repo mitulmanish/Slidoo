@@ -77,6 +77,7 @@ extension NavigationDrawerSwipeController {
     }
 
     @objc public func didPan(panRecognizer: UIPanGestureRecognizer, screenGestureEnabled: Bool = false) {
+        containerView?.isHidden = false
         guard let presentedView = self.presentedView else { return }
 
         let translationPoint = panRecognizer.translation(in: presentedView)

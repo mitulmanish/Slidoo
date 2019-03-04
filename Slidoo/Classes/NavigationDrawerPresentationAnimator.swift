@@ -73,11 +73,12 @@ extension NavigationDrawerPresentationAnimator: UIViewControllerAnimatedTransiti
             leadingConstraint?.constant = -concernedView.bounds.width
             UIView.animate(withDuration: TimeInterval.leastNormalMagnitude
                 , animations: {
+                    containerView.isHidden = true
                     dimmingView?.alpha = 0.5
                     containerView.layoutIfNeeded()
             }) { finished in
-                leadingConstraint?.constant = 0
                 transitionContext.completeTransition(finished)
+                leadingConstraint?.constant = 0
             }
         }
     }
