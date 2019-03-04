@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Slidoo'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'Navigation Drawer implemented with Swift'
 
 # This description is used to generate tags and improve search results.
